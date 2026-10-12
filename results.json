@@ -1,0 +1,20 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "dataset": "bitext/Bitext-hospitality-llm-chatbot-training-dataset",
+  "intents": 25,
+  "train_examples": 4000,
+  "test_examples": 500,
+  "lora": {"r": 16, "alpha": 32, "dropout": 0.05,
+           "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]},
+  "trainable_params": 8798208,
+  "total_params": 502830976,
+  "trainable_pct": 1.75,
+  "epochs": 2,
+  "steps": 250,
+  "final_train_loss": 0.037,
+  "train_minutes": 30.7,
+  "device": "Tesla T4",
+  "accuracy_base": 0.44,
+  "accuracy_lora": 0.99,
+  "run_date": "2026-10-12"
+}
